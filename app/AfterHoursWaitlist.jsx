@@ -47,9 +47,9 @@ export default function AfterHoursWaitlist() {
       if (error.code === "23505") {
         setStatus("done");
         return;
-      }
-      console.error("[waitlist] insert failed:", error.message);
-      setStatus("error");
+      console.error("[waitlist] insert failed:", error);
+alert("SUPABASE ERROR: " + error.message);
+setStatus("error");
       return;
     }
 
